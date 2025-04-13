@@ -1,8 +1,6 @@
 import { Cidade } from "src/cidades/entities/cidade.entity";
 import { BeforeInsert, Column, Entity, JoinColumn, ManyToOne, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 
-const { nanoid} = require("nanoid")
-
 @Entity('estudantes')
 export class Estudante {
     @PrimaryGeneratedColumn()
@@ -23,7 +21,4 @@ export class Estudante {
     @ManyToOne(() => Cidade, (cidade) => cidade.estudantes)
     @JoinColumn({name: 'cidade_id'})
     cidade: Cidade; 
-
-    
-    
 }
