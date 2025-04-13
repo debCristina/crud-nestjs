@@ -1,0 +1,68 @@
+//Requisições de Ufs
+POST http://localhost:3000/ufs HTTP/1.1
+Content-Type: aplication/json
+
+{
+	"nome": "Goias",
+    "sigla": "GO"
+}
+
+GET http://localhost:3000/ufs HTTP/1.1
+
+GET http://localhost:3000/ufs/2 HTTP/1.1
+
+PATCH http://localhost:3000/ufs/2 HTTP/1.1
+Content-Type: aplication/json
+
+{
+	"nome": "Goias"
+}
+
+DELETE http://localhost:3000/ufs/2 HTTP/1.1
+
+//Requisições de cidades
+POST http://localhost:3000/cidades HTTP/1.1
+Content-Type: aplication/json
+
+{
+	"nome": "Cidade1",
+    "uf_id": 1
+}
+
+GET http://localhost:3000/cidades HTTP/1.1
+
+GET http://localhost:3000/cidades/4 HTTP/1.1
+
+PATCH http://localhost:3000/cidades/4 HTTP/1.1
+Content-Type: aplication/json
+
+{
+	"nome": "cidade1"
+}
+
+DELETE http://localhost:3000/cidades/4 HTTP/1.1
+
+//Requisições de estudantes
+POST http://localhost:3000/estudantes HTTP/1.1
+Content-Type: aplication/json
+
+{
+   "nome": "Julio",
+	"matricula": "UC29083612",
+	"email": "julio@gmail.com",
+	"dt_nascimento": "2000-01-01",
+	"cidade_id": 3
+}
+
+GET http://localhost:3000/estudantes HTTP/1.1
+
+GET  http://localhost:3000/estudantes/10 HTTP/1.1
+
+PATCH http://localhost:3000/estudantes/10 HTTP/1.1
+Content-Type: aplication/json
+
+{
+	"dt_nascimento": "20002-02-02",
+}
+
+DELETE http://localhost:3000/estudantes/10 HTTP/1.1

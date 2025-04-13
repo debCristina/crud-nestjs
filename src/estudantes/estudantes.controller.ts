@@ -19,14 +19,14 @@ export class EstudantesController {
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
-    const estudante = await this.estudantesService.remove(+id);
+    const estudante = await this.estudantesService.findOne(+id);
     if(!estudante) throw new NotFoundException();  
     return estudante;
   }
 
   @Patch(':id')
   async update(@Param('id') id: string, @Body() updateEstudanteDto: UpdateEstudanteDto) {
-    const estudante = await this.estudantesService.remove(+id);
+    const estudante = await this.estudantesService.update(+id, updateEstudanteDto);
     if(!estudante) throw new NotFoundException();  
     return estudante;
   }

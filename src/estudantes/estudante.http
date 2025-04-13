@@ -1,3 +1,0 @@
-GET http://localhost:3000/estudantes/1 HTTP/1.1
-
-GET  http://localhost:3000/estudantes HTTP/1.1
